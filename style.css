@@ -51,10 +51,10 @@ body { line-height: 1.6; background: #f8f9fc; color: #333; }
   z-index: 0;
 }
 .circles { position: absolute; top: 20px; left: 20px; display: flex; gap: 12px; z-index: 2; }
-.circles span { width: 28px; height: 28px; background: #fff; border-radius: 50%; display: block; }
-.frame { position: absolute; border: 3px solid rgba(255, 255, 255, 0.349); z-index: 1; }
-.frame-left { top: 50px; left: 120px; width: 140px; height: 140px; }
-.frame-right { bottom: 40px; right: 160px; width: 160px; height: 160px; }
+.circles span { width: 0.5em; height: 0.5em; background: #ffffff9c; border-radius: 50%; display: block; }
+.frame { position: absolute; border: 3px solid rgba(255, 255, 255, 0.205); z-index: 1; }
+.frame-left { top: 50px; left: 12px; width: 7em; height: 5em; }
+.frame-right { bottom: 40px; right: 16px; width: 7em; height: 7em; }
 .header-text { position: relative; z-index: 3; text-align: center; padding: 0 10px; }
 .header-text h1 { font-size: 2.5rem; line-height: 1.3; font-weight: bold; }
 .header-text .highlight { color: #8efc6d; }
@@ -179,24 +179,12 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .desktop-header { display: none !important; }
-  .custom-header { display: flex !important; height: 8em; }
-  /* .frame-left, .frame-right { display: none; } */
+  .custom-header { display: flex !important; height: 6em; }
+  /* .frame-left, .frame-right,.circles { display: none; } */
   .circles { top: 10px; left: 10px; }
-  .header-text h1 { font-size: 1.8rem; }
-  .header-text small { font-size: 1rem; }
-
-  .contact-cards { grid-template-columns: 1fr; }
-  .teacher-list { flex-direction: column; align-items: center;width: 90%}
-  .teacher-info { flex-direction: column; text-align: center; width: 90%;}
-}
-@media (max-width: 500px){
-  .desktop-header { display: none !important; }
-  .custom-header { display: flex !important; height: 8em; }
-  .frame-left, .frame-right { display: none; }
-  .circles { display: none;}
-  .header-text h1 { font-size: 1.8rem; }
-  .header-text small { font-size: 1rem; }
-
+  .header-text h1 { font-size: 1rem; }
+  .header-text small { font-size: 0.8rem; }
+  h2{font-size: 1.3em;}
   .contact-cards { grid-template-columns: 1fr; }
   .teacher-list { flex-direction: column; align-items: center;width: 90%}
   .teacher-info { flex-direction: column; text-align: center; width: 90%;}
