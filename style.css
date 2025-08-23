@@ -189,4 +189,16 @@ footer {
   .teacher-list { flex-direction: column; align-items: center;width: 90%}
   .teacher-info { flex-direction: column; text-align: center; width: 90%;}
 }
+@media (max-width: 500px){
+  .desktop-header { display: none !important; }
+  .custom-header { display: flex !important; height: 8em; }
+  .frame-left, .frame-right { display: none; }
+  .circles { display: none;}
+  .header-text h1 { font-size: 1.8rem; }
+  .header-text small { font-size: 1rem; }
+
+  .contact-cards { grid-template-columns: 1fr; }
+  .teacher-list { flex-direction: column; align-items: center;width: 90%}
+  .teacher-info { flex-direction: column; text-align: center; width: 90%;}
+}
 
