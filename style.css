@@ -14,8 +14,12 @@ body { line-height: 1.6; background: #f8f9fc; color: #333; }
 
 /* DESKTOP HEADER */
 .desktop-header {
+  display:flex;
+  flex-direction: row;
+  height:10em;
   display: block !important;
   background: url("images/header.jpg") no-repeat center center/cover;
+  
   color: #fff;
   text-align: center;
   padding: 60px 0;
@@ -51,13 +55,13 @@ body { line-height: 1.6; background: #f8f9fc; color: #333; }
   z-index: 0;
 }
 .circles { position: absolute; top: 20px; left: 20px; display: flex; gap: 12px; z-index: 2; }
-.circles span { width: 0.5em; height: 0.5em; background: #ffffff9c; border-radius: 50%; display: block; }
-.frame { position: absolute; border: 3px solid rgba(255, 255, 255, 0.205); z-index: 1; }
+.circles span { width: 0.5em; height: 0.5em; background: #ffffff; border-radius: 50%; display: block; }
+.frame { position: absolute; border: 3px solid rgba(255, 255, 255, 0.219); z-index: 1; }
 .frame-left { top: 50px; left: 12px; width: 7em; height: 5em; }
 .frame-right { bottom: 40px; right: 16px; width: 7em; height: 7em; }
 .header-text { position: relative; z-index: 3; text-align: center; padding: 0 10px; }
 .header-text h1 { font-size: 2.5rem; line-height: 1.3; font-weight: bold; }
-.header-text .highlight { color: #8efc6d; }
+.header-text .highlight { color: #8efc6d;}
 .header-text small { display: block; margin-top: 8px; font-size: 1.2rem; }
 
 /* Section Titles */
@@ -74,7 +78,7 @@ h2 {
 /* About */
 .about p {
   text-align: center;
-  max-width: 800px;
+  max-width: 90%;
   margin: auto;
   font-size: 1.1rem;
   background: rgba(255,255,255,0.8);
@@ -129,6 +133,38 @@ h2 {
 }
 .teacher-info h3 { margin-bottom: 6px; color: #0077b6; }
 
+/* Achievements */
+.achievement-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+.achievement-info {
+  min-width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.achievement-info:hover { transform: translateY(-5px); }
+.achievement-info img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 2%;
+  border: 3px solid gold;
+}
+.achievement-info h3 { margin-bottom: 6px; color: #0077b6; }
+
 /* Contact */
 .contact {
   background: #f8fbff;
@@ -180,13 +216,36 @@ footer {
 @media (max-width: 768px) {
   .desktop-header { display: none !important; }
   .custom-header { display: flex !important; height: 6em; }
-  /* .frame-left, .frame-right,.circles { display: none; } */
   .circles { top: 10px; left: 10px; }
   .header-text h1 { font-size: 1rem; }
   .header-text small { font-size: 0.8rem; }
-  h2{font-size: 1.3em;}
+  h2 { font-size: 1.3em; }
   .contact-cards { grid-template-columns: 1fr; }
-  .teacher-list { flex-direction: column; align-items: center;width: 90%}
-  .teacher-info { flex-direction: column; text-align: center; width: 90%;}
+  .teacher-list { flex-direction: column; align-items: center; width: 90%; }
+  .teacher-info { flex-direction: column; text-align: center; width: 90%; }
+  .achievement-list { flex-direction: column; align-items: center; width: 90%; }
+  .achievement-info { flex-direction: column; text-align: center; width: 90%;}
+}
+@media (max-width:1400px) and (min-width:1000px){
+  *{
+    font-size: 0.97em;
+  }
+}
+@media (max-width:400px){
+  *{
+    font-size:0.9em;
+  }
+}
+.logo-container{
+  margin-top:-2.6em;
+  margin-left: 1em;
+  background-color: white;
+  height:170%;
+  width:13em;
+  border: 2px solid white;
+  border-radius: 20%;
 }
 
+#bunty:hover{
+  border:10px double yellow;
+}
